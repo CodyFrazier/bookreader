@@ -1,0 +1,89 @@
+.widthundred{
+    width: 100%;
+}
+
+.heighthundred{
+    height: 100%;
+}
+
+.height4{
+    height: 400px;
+}
+
+.width4{
+    width: 400px;
+}
+
+.maxWidth2{
+    max-width: 200px;
+}
+.maxWidth3{
+    max-width: 300px;
+}
+.maxWidth4{
+    max-width: 400px;
+}
+.maxWidth5{
+    max-width: 500px;
+}
+.maxWidth6{
+    max-width: 600px;
+}
+.maxWidth7{
+    max-width: 700px;
+}
+
+.maxHeight2{
+    max-height: 200px;
+}
+.maxHeight3{
+    max-height: 300px;
+}
+.maxHeight4{
+    max-height: 400px;
+}
+.maxHeight5{
+    max-height: 500px;
+}
+.maxHeight7{
+    max-height: 700px;
+}
+
+.minHeight100{
+    min-height: 100%;
+}
+.maxHeight100{
+    max-height: 100%;
+}
+
+.vw3{
+    width: 29vw;
+}
+
+.vh6{
+    height: 6vh;
+}
+
+.vh10{
+    height: 10vh;
+}
+
+.vh70{
+    height: 70vh;
+}
+
+.vh80{
+    height: 80vh;
+}
+
+.vh74{
+    height: 74vh;
+}
+
+.vh62{
+    height: 61.5vh;
+}
+
+.scrollable{
+    overflow-y: scroll;
+}

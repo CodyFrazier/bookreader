@@ -1,6 +1,6 @@
 {
   "name": "bookreader",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An online bookreader for those on the go",
   "main": "./src/index.js",
   "scripts": {
@@ -22,8 +22,11 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "pg": "^8.0.3"
+    "path": "^0.12.7",
+    "pg": "^8.0.3",
+    "react-router-dom": "^5.2.0"
   }
 }

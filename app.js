@@ -11,7 +11,7 @@ app.use(express.json());
 app.use('/dist', express.static(path.join(__dirname, 'dist')));
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
-app.get('/', (request, response, next) => {
+app.get('/*', (request, response, next) => {
     response.render(path.join(__dirname, 'index.html'))
 });
 
