@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import NavBar from './NavBar';
-import Landing from './Landing';
-import SearchBrowser from './SearchBrowser';
-import Help from './Help';
-import Community from './Community';
-import Profile from './Profile';
-import MyWork from './MyWork';
-import Bookmarks from './Bookmarks';
-import Footer from './Footer';
-import Login from './Login';
+import NavBar from './Page Components/NavBar';
+import Landing from './Page Components/Landing';
+import SearchBrowser from './Page Components/SearchBrowser';
+import Help from './Page Components/Help';
+import Community from './Page Components/Community';
+import Profile from './Page Components/Profile';
+import MyWork from './Page Components/MyWork';
+import Bookmarks from './Page Components/Bookmarks';
+import Footer from './Page Components/Footer';
+import Login from './Page Components/Login';
 
 console.log('Loading App...');
 

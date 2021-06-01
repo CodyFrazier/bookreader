@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ScrollRow from '../Generic Components/ScrollRow.js';
 
 const Landing = ({ auth }) => {
 
@@ -6,6 +7,9 @@ const Landing = ({ auth }) => {
         <div>
             <div>The Landing Page</div>
             <div>Featured Books, Suggestions, Aaaadvertisements...?, Random Selection ( within whitelisted tags ), Featured Tag or two</div>
+            <ScrollRow />
+            <ScrollRow />
+            <ScrollRow />
         </div>
     )
 }

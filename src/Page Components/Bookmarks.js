@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+import ScrollMatrix from '../Generic Components/ScrollMatrix.js';
+
 const Bookmarks = ({ auth }) => {
 
     const [bookmarks, setBookmarks] = useState([]);
@@ -25,6 +27,7 @@ const Bookmarks = ({ auth }) => {
                 <div>{ bookmarkNum }</div>
             </div>
             <input type = 'button' onClick = { () => { dummyBookmarker() } } value = 'Add Bookmark Dummy' />
+            <ScrollMatrix />
         </div>
     )
 }
