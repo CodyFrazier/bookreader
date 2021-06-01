@@ -9,6 +9,7 @@ import Profile from './Profile';
 import MyWork from './MyWork';
 import Bookmarks from './Bookmarks';
 import Footer from './Footer';
+import Login from './Login';
 
 console.log('Loading App...');
 
@@ -49,18 +50,24 @@ const App = () => {
         console.log('authenticating...')
     }, [auth]);
 
+    const login = () => {
+        console.log(auth.id ? 'logging out...' : 'logging in...' );
+        setAuth(auth.id ? {} : { id: '0000-0000-0000-0000' });
+    }
+
     return (
         <Router>
             <div id = 'container'>
                 <main className = ''>
-                    <NavBar />
+                    <NavBar auth = { auth } />
                     <Route path = '/' exact render = { (props) => ( <>{ <Landing auth = { auth } /> }</> )} />
                     <Route path = '/search/' exact render = { (props) => ( <>{ <SearchBrowser auth = { auth } /> }</> )} />
                     <Route path = '/help/' exact render = { (props) => ( <>{ <Help auth = { auth } /> }</> )} />
                     <Route path = '/community/' exact render = { (props) => ( <>{ <Community auth = { auth } /> }</> )} />
                     <Route path = '/mywork/' exact render = { (props) => ( <>{ <MyWork auth = { auth } /> }</> )} />
                     <Route path = '/bookmarks/' exact render = { (props) => (<> { <Bookmarks auth = { auth } /> }</> ) } />
-                    <Route path = '/profile/' exact render = { (props) => ( <>{ <Profile auth = { auth } /> }</> )} />
+                    <Route path = '/profile/' exact render = { (props) => ( <>{ auth.id && <Profile auth = { auth } login = { login } /> }</> )} />
+                    <Route path = '/login/' exact render = { (props) => ( <>{ !auth.id && <Login login = { login } /> }</> )} />
                 </main>
                 <Route path = '/' exact render = { (props) => ( <>{ <Footer /> }</> )} />
             </div>

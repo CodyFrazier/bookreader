@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Login from './Login';
 
-const Profile = ({ auth }) => {
+const Profile = ({ auth, login }) => {
 
     const [profile, setProfile] = useState({});
 
@@ -12,10 +13,13 @@ const Profile = ({ auth }) => {
     }, [profile]);
 
     return (
-        <div>
+        <div className = 'columnNW'>
             <div>Profile</div>
             <Link to = '/help/' id = 'navHelp' className = '' value = 'Help'>
                 <img className = 'bgAO height48' src = { `/assets/img/NavBarItems/HelpLogo${ '240' }.png` } />
+            </Link>
+            <Link to = '/'>
+                <input type = 'button' onClick = { () => login() } value = 'Log Out' />
             </Link>
         </div>
     )
