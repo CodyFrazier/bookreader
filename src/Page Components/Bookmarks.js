@@ -20,7 +20,7 @@ const Bookmarks = ({ auth }) => {
     };
 
     return (
-        <div>
+        <div className = 'scrollable vh90'>
             <div>Bookmarked works for ease finding reading material</div>
             <div className = 'rowNW spaceBetweenRow margin1'>
                 <div>Current Bookmarks:</div>

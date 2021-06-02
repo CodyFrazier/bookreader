@@ -50,15 +50,16 @@ const App = () => {
         console.log('authenticating...')
     }, [auth]);
 
-    const login = () => {
+    const login = (credentials) => {
         console.log(auth.id ? 'logging out...' : 'logging in...' );
-        setAuth(auth.id ? {} : { id: '0000-0000-0000-0000' });
+        //make a call to the database and retrieve auth info for the given user.
+        setAuth(auth.id ? {} : { id: '0000-0000-0000-0000', username: credentials.username, penname: credentials.penname });
     }
 
     return (
         <Router>
             <div id = 'container'>
-                <main className = ''>
+                <main className = 'bgDG colOW .scrollable'>
                     <NavBar auth = { auth } />
                     <Route path = '/' exact render = { (props) => ( <>{ <Landing auth = { auth } /> }</> )} />
                     <Route path = '/search/' exact render = { (props) => ( <>{ <SearchBrowser auth = { auth } /> }</> )} />

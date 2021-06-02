@@ -5,7 +5,7 @@ import ScrollMatrix from '../Generic Components/ScrollMatrix.js';
 const MyWork = ({ auth }) => {
 
     return (
-        <div>
+        <div className = 'scrollable vh90'>
             <div>Personally Uploaded Projects and Drafts</div>
             <ScrollMatrix />
         </div>

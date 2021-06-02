@@ -76,12 +76,20 @@
     height: 80vh;
 }
 
+.vh90{
+    height: 90vh;
+}
+
 .vh74{
     height: 74vh;
 }
 
 .vh62{
     height: 61.5vh;
+}
+
+.vh82{
+    height: 82vh;
 }
 
 .scrollable{

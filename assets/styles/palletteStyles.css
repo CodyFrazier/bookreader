@@ -1,3 +1,57 @@
+/* Accent Orange */
+.colorAO{
+    color: #ea7200;
+}
 .bgAO{
     background-color: #ea7200;
 }
+.borderAO{
+    border: 1px solid #ea7200;
+}
+.topBorderAO{
+    border-top: 1px solid;
+    border-top-color: #ea7200;
+}
+.bottomBorderAO{
+    border-bottom: 1px solid;
+    border-bottom-color: #ea7200;
+}
+
+/* Off White */
+.colOW{
+    color: #d9d9d9;
+}
+.bgOW{
+    background-color: #d9d9d9;
+}
+.borderOW{
+    border: 1px solid #d9d9d9;
+}
+.topBorderOW{
+    border-top: 1px solid;
+    border-top-color: #d9d9d9;
+}
+.bottomBorderOW{
+    border-bottom: 1p solid;
+    border-bottom-color: #d9d9d9;
+}
+
+/* Dark Gray */
+.colorDG{
+    color: #131313;
+}
+.bgDG{
+    background-color: #131313;
+}
+.borderDG{
+    border: 1px solid #131313;
+}
+.topBorderDG{
+    border-top: 1px solid;
+    border-top-color: #131313;
+}
+.bottomBorderDG{
+    border-bottom: 1px solid;
+    border-bottom-color: #131313;
+}
+

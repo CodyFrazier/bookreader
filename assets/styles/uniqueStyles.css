@@ -28,7 +28,7 @@ footer{
     flex-shrink: 0;
     padding: .5rem;
     font-size: 18px;
-    background-image: linear-gradient(#efefef, #1c5d83, #1c5d83, #1c5d83, #1c5d83, #1c5d83, #1c5d83);
+    background-image: linear-gradient(#131313, #1c5d83, #1c5d83, #1c5d83, #1c5d83, #1c5d83, #1c5d83);
     color: #efefef;
 }
 

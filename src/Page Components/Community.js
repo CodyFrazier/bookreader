@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 const Community = ({ auth }) => {
 
     return (
-        <div>
+        <div className = 'scrollable vh90'>
             <div>Community</div> 
         </div>
         
