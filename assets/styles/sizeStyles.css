@@ -96,7 +96,12 @@
     overflow-y: scroll;
 }
 
-.storyIMG{
+.rowIMG{
     width: 135px;
     height: 202px;
+}
+
+.matrixIMG{
+    height: 126.25px;
+    width: 84.375px;
 }

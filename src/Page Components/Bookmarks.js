@@ -27,7 +27,7 @@ const Bookmarks = ({ auth }) => {
                 <div>{ bookmarkNum }</div>
             </div>
             <input type = 'button' onClick = { () => { dummyBookmarker() } } value = 'Add Bookmark Dummy' />
-            <ScrollMatrix />
+            <ScrollMatrix heading = { 'My Bookmarks' } />
         </div>
     )
 }

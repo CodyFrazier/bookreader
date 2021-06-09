@@ -7,7 +7,7 @@ const MyWork = ({ auth }) => {
     return (
         <div className = 'scrollable vh90'>
             <div>Personally Uploaded Projects and Drafts</div>
-            <ScrollMatrix />
+            <ScrollMatrix heading = { 'My Saved Work' } />
         </div>
     )
 }

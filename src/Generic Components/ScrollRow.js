@@ -16,9 +16,18 @@ const ScrollRow = ({ rowName, rowNum }) => {
         <div className = 'topMargin1 leftMarginHalf rightMarginHalf'>
             <h3>{ rowName } { rowNum }</h3>
             <div className = 'padHalf borderOW rowNW scrollable'>
-                <StoryPreview num = { 1 } />
-                <StoryPreview num = { 2 } />
-                <StoryPreview num = { 3 } />
+                <StoryPreview num = { 1 } imgSize = { 'rowIMG' } />
+                <StoryPreview num = { 2 } imgSize = { 'rowIMG' } />
+                <StoryPreview num = { 3 } imgSize = { 'rowIMG' } />
+                <StoryPreview num = { 4 } imgSize = { 'rowIMG' } />
+                <StoryPreview num = { 5 } imgSize = { 'rowIMG' } />
+                <StoryPreview num = { 6 } imgSize = { 'rowIMG' } />
+                <StoryPreview num = { 7 } imgSize = { 'rowIMG' } />
+                <StoryPreview num = { 8 } imgSize = { 'rowIMG' } />
+                <StoryPreview num = { 9 } imgSize = { 'rowIMG' } />
+                <StoryPreview num = { 10 } imgSize = { 'rowIMG' } />
+                <StoryPreview num = { 11 } imgSize = { 'rowIMG' } />
+                <StoryPreview num = { 12 } imgSize = { 'rowIMG' } />
             </div>  
         </div>
         
