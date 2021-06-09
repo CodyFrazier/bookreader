@@ -95,3 +95,8 @@
 .scrollable{
     overflow-y: scroll;
 }
+
+.storyIMG{
+    width: 135px;
+    height: 202px;
+}

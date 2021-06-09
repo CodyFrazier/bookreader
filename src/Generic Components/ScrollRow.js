@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import StoryPreview from './StoryPreview';
 
-const ScrollRow = () => {
+const ScrollRow = ({ rowName, rowNum }) => {
 
     //To Do
     /*
@@ -11,14 +11,14 @@ const ScrollRow = () => {
         3. Set up a way to determine the heading for the ScrollRow
     */
 
+    //This is a scrolling row for housing various things such as a list of featured stories or the like.
     return (
-        <div className = 'topMargin1'>
-            <div>This is a scrolling row for housing various things such as a list of featured stories or the like.</div>
-            <h3>Variable ScrollRow Heading</h3>
-            <div>
-                <StoryPreview />
-                <StoryPreview />
-                <StoryPreview />
+        <div className = 'topMargin1 leftMarginHalf rightMarginHalf'>
+            <h3>{ rowName } { rowNum }</h3>
+            <div className = 'padHalf borderOW rowNW scrollable'>
+                <StoryPreview num = { 1 } />
+                <StoryPreview num = { 2 } />
+                <StoryPreview num = { 3 } />
             </div>  
         </div>
         
