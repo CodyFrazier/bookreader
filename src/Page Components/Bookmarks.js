@@ -21,10 +21,9 @@ const Bookmarks = ({ auth }) => {
 
     return (
         <div className = 'scrollable vh90'>
-            <div>Bookmarked works for ease finding reading material</div>
-            <div className = 'rowNW spaceBetweenRow margin1'>
-                <div>Current Bookmarks:</div>
-                <div>{ bookmarkNum }</div>
+            <div className = 'topBorderAO bottomBorderAO topMargin1 bottomMargin1 rowNW spaceAroundRow'>
+                <div className = 'margin1'>Current Bookmarks:</div>
+                <div className = 'margin1'>{ bookmarkNum }</div>
             </div>
             <input type = 'button' onClick = { () => { dummyBookmarker() } } value = 'Add Bookmark Dummy' />
             <ScrollMatrix heading = { 'My Bookmarks' } />

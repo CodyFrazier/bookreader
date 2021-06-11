@@ -15,6 +15,10 @@
     flex-flow: column wrap;
 }
 
+.whitespaceNW{
+    white-space: nowrap;
+}
+
 .alignCenter{
     align-items: center;
 }

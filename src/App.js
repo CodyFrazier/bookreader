@@ -10,6 +10,7 @@ import MyWork from './Page Components/MyWork';
 import Bookmarks from './Page Components/Bookmarks';
 import Footer from './Page Components/Footer';
 import Login from './Page Components/Login';
+import InvalidBook from './Page Components/InvalidBook';
 
 console.log('Loading App...');
 
@@ -69,6 +70,7 @@ const App = () => {
                     <Route path = '/bookmarks/' exact render = { (props) => (<> { <Bookmarks auth = { auth } /> }</> ) } />
                     <Route path = '/profile/' exact render = { (props) => ( <>{ auth.id && <Profile auth = { auth } login = { login } /> }</> )} />
                     <Route path = '/login/' exact render = { (props) => ( <>{ !auth.id && <Login login = { login } /> }</> )} />
+                    <Route path = '/browse/story-does-not-exist/' exact render = { (props) => ( <>{ <InvalidBook /> }</> )} />
                 </main>
                 <Route path = '/' exact render = { (props) => ( <>{ <Footer /> }</> )} />
             </div>

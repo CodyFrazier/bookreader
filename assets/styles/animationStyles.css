@@ -1,0 +1,27 @@
+/* Scrolling text */
+@keyframes textScroll {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.textScroll {
+    animation: textScroll 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes textScrollAfter {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+.textScrollAfter {
+    animation: textScrollAfter 5s;
+    animation-iteration-count: infinite;
+}

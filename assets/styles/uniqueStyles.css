@@ -62,3 +62,15 @@ select:focus{
 .centerText{
     text-align: center;
 }
+
+.noBorder{
+    border: 0px;
+}
+
+.undecorated{
+    text-decoration: none;
+}
+
+.noverflow{
+    overflow: hidden;
+}

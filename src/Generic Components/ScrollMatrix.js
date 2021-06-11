@@ -14,9 +14,9 @@ const ScrollMatrix = ({ heading }) => {
 
     //This is a vertically scrolling matrix for housing various things such as a list of featured stories or the like.
     return (
-        <div className = 'topMargin1 columnNW alignCenter'>
-            <h3>{ heading }</h3>
-            <div className = 'columnNW borderOW rightMarginHalf leftMarginHalf bottomMarginHalf'>
+        <div className = 'columnNW alignCenter'>
+            <h3 className = 'marginHalf'>{ heading }</h3>
+            <div className = 'columnNW rightMarginHalf leftMarginHalf bottomMarginHalf'>
                 <div className = 'rowNW'>
                     <StoryPreview imgSize = { 'matrixIMG' } />
                     <StoryPreview imgSize = { 'matrixIMG' } />
