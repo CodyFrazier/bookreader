@@ -189,6 +189,14 @@
     margin-top: auto;
 }
 
+.negTopMargin100{
+    margin-top: -1.64rem;
+}
+
+.negLeftMargin100{
+    margin-left: 100%;
+}
+
 /* Border Radius */
 
 .border5{

@@ -10,6 +10,9 @@ import MyWork from './Page Components/MyWork';
 import Bookmarks from './Page Components/Bookmarks';
 import Footer from './Page Components/Footer';
 import Login from './Page Components/Login';
+
+import DraftEditor from './Page Components/DraftEditor';
+import FileUpload from './Generic Components/FileUpload';
 import InvalidBook from './Page Components/InvalidBook';
 
 console.log('Loading App...');
@@ -46,6 +49,7 @@ const App = () => {
 
     //State
     const [auth, setAuth] = useState({});
+    const [publishedBooks, setPublishedBooks] = useState([]);
 
     useEffect(() => {
         console.log('authenticating...')
@@ -63,14 +67,17 @@ const App = () => {
                 <main className = 'bgDG colOW .scrollable'>
                     <NavBar auth = { auth } />
                     <Route path = '/' exact render = { (props) => ( <>{ <Landing auth = { auth } /> }</> )} />
-                    <Route path = '/search/' exact render = { (props) => ( <>{ <SearchBrowser auth = { auth } /> }</> )} />
+                    <Route path = '/search/' exact render = { (props) => ( <>{ <SearchBrowser auth = { auth } publishedBooks = { publishedBooks } /> }</> )} />
                     <Route path = '/help/' exact render = { (props) => ( <>{ <Help auth = { auth } /> }</> )} />
                     <Route path = '/community/' exact render = { (props) => ( <>{ <Community auth = { auth } /> }</> )} />
-                    <Route path = '/mywork/' exact render = { (props) => ( <>{ <MyWork auth = { auth } /> }</> )} />
-                    <Route path = '/bookmarks/' exact render = { (props) => (<> { <Bookmarks auth = { auth } /> }</> ) } />
+                    <Route path = '/mywork/' exact render = { (props) => ( <>{ <MyWork auth = { auth } publishedBooks = { publishedBooks } /> }</> )} />
+                    <Route path = '/bookmarks/' exact render = { (props) => (<> { <Bookmarks auth = { auth } publishedBooks = { publishedBooks } /> }</> ) } />
                     <Route path = '/profile/' exact render = { (props) => ( <>{ auth.id && <Profile auth = { auth } login = { login } /> }</> )} />
                     <Route path = '/login/' exact render = { (props) => ( <>{ !auth.id && <Login login = { login } /> }</> )} />
-                    <Route path = '/browse/story-does-not-exist/' exact render = { (props) => ( <>{ <InvalidBook /> }</> )} />
+
+                    <Route path = '/mywork/draft/' exact render = { (props) => ( <>{ <DraftEditor auth = { auth } /> }</> )} />
+                    <Route path = '/mywork/upload/' exact render = { (props) => ( <>{ <FileUpload auth = { auth } /> }</> )} />
+                    <Route path = '/search/story-does-not-exist/' exact render = { (props) => ( <>{ <InvalidBook /> }</> )} />
                 </main>
                 <Route path = '/' exact render = { (props) => ( <>{ <Footer /> }</> )} />
             </div>

@@ -55,10 +55,6 @@ select:focus{
     align-items: stretch;
 }
 
-.height48{
-    height : 48px;
-}
-
 .centerText{
     text-align: center;
 }

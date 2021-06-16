@@ -6,14 +6,32 @@
     height: 100%;
 }
 
-.height4{
+.height32{
+    height : 32px;
+}
+
+.height36{
+    height : 36px;
+}
+
+.height48{
+    height : 48px;
+}
+
+.height400{
     height: 400px;
 }
 
-.width4{
+.width400{
     width: 400px;
 }
 
+.maxWidth85{
+    max-width: 85px;
+}
+.maxWidth135{
+    max-width: 135px;
+}
 .maxWidth2{
     max-width: 200px;
 }

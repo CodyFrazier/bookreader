@@ -57,6 +57,12 @@
     align-self: stretch;
 }
 
+.grow0{
+    flex-grow: 0;
+}
+.shrink0{
+    flex-shrink: 0;
+}
 .grow1{
     flex-grow: 1;
 }

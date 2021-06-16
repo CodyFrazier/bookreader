@@ -32,6 +32,11 @@ const Login = ({ login }) => {
 
     return (
         <div className = 'scrollable vh90 columnNW'>
+            <div className = 'topBorderAO bottomBorderAO topMargin1 bottomMargin1 rowNW spaceAroundRow'>
+                <Link to = '/help/'>
+                    <div className = 'padHalf'>Help Page</div>
+                </Link>
+            </div>
             <div className = 'alignCenter margin1'>
                 <div className = 'rowNW'>
                     <div className = { `widthundred topLeft15 centerText padHalf borderOW ${ currentForm ? '' : 'bottomBorderDG' }` } onClick = { () => { if(currentForm){ changeForm() } } }>Log In</div>

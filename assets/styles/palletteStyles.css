@@ -55,3 +55,21 @@
     border-bottom-color: #131313;
 }
 
+/* Pitch Gray */
+.colorPG{
+    color: #030303
+}
+.bgPG{
+    background-color: #030303;
+}
+.borderPG{
+    border: 1px solid #030303;
+}
+.topBorderPG{
+    border-top: 1px solid;
+    border-top-color: #030303;
+}
+.bottomBorderPG{
+    border-bottom: 1px solid;
+    border-bottom-color: #030303;
+}
