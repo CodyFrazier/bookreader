@@ -19,7 +19,7 @@ const NavBar = ({ auth }) => {
             { auth.id && <Link to = '/bookmarks/' className = '' value = 'Bookmarks'>
                 <img className = 'bgAO height48' src = { `/assets/img/NavBarItems/BookmarkLogo${ '240' }.png` } />
             </Link> }
-            <Link to = { `/${ auth.id ? 'profile' : 'login' }/` } className = '' value = 'Profile'>
+            <Link to = { `/${ auth.id ? `profile/${ auth.username.replace(/ /g, '-') }` : 'login/' }` } className = '' value = 'Profile'>
                 <img className = 'bgAO height48' src = { `/assets/img/NavBarItems/ProfileDefault${ '240' }.png` } />
             </Link>
         </nav>

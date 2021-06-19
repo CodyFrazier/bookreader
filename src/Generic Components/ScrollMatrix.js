@@ -55,10 +55,10 @@ const ScrollMatrix = ({ auth, heading, publishedBooks, searchQuery }) => {
             <h3 className = 'marginHalf'>{ heading }</h3>
             <div className = 'rightMarginHalf leftMarginHalf bottomMarginHalf gridMatrix gridGap1px'>
                 { filteredBooks.map((book, idx) => {
-                    console.log(`Filtering Books... Current checking:`);
-                    console.log(book);
-                    console.log(book.type);
-                    console.log(typeof(book.type));
+                    //console.log(`Filtering Books... Current checking:`);
+                    //console.log(book);
+                    //console.log(book.type);
+                    //console.log(typeof(book.type));
                     if(book.type == 'Object'){
                         return ( <StoryPreview imgSize = { 'matrixIMG' } book = { book } /> )
                     }else{

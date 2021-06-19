@@ -1,5 +1,9 @@
 client = require('./client');
 
+const { authenticateUser } = require('./auth');
+
+const Models = { users } = require('./Models');
+
 const sync = async() => {
     const SQL = `
         CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
@@ -10,7 +14,8 @@ const sync = async() => {
             username VARCHAR(28),
             password VARCHAR(100),
             penname VARCHAR(100),
-            author_bio TEXT
+            author_bio TEXT,
+            bookmark_list TEXT []
         );
     `;
     
@@ -18,5 +23,7 @@ const sync = async() => {
 };
 
 module.exports = {
-    sync
+    sync,
+    Models,
+    authenticateUser
 };

@@ -15,7 +15,12 @@ import DraftEditor from './Page Components/DraftEditor';
 import FileUpload from './Generic Components/FileUpload';
 import InvalidBook from './Page Components/InvalidBook';
 
+import axios from 'axios';
+
 console.log('Loading App...');
+console.log(`Local Storage.token: `);
+console.log(window.localStorage.getItem('token'));
+console.log(typeof(window.localStorage.getItem('token')));
 
 /* 
 **********************************************TO DO********************************************
@@ -48,18 +53,47 @@ Consider adding other nav bar items as well
 const App = () => {
 
     //State
-    const [auth, setAuth] = useState({});
+    const [auth, setAuth] = useState({ });
     const [publishedBooks, setPublishedBooks] = useState([]);
 
     useEffect(() => {
-        console.log('authenticating...')
+        console.log('authenticating...');
+        const token = window.localStorage.getItem('token');
+        if(!auth.id){
+            //setAuth({ token });
+            console.log('hi')
+        }
     }, [auth]);
 
-    const login = (credentials) => {
-        console.log(auth.id ? 'logging out...' : 'logging in...' );
+    const login = async (credentials) => {
+        console.log(auth.id ? `logging out...` : `logging in as ${ credentials.username }...` );
         //make a call to the database and retrieve auth info for the given user.
-        setAuth(auth.id ? {} : { id: '0000-0000-0000-0000', username: credentials.username, penname: credentials.penname });
+        if(!auth.id){
+            const token = (await axios.post('/api/auth', credentials)).data.token;
+            console.log('App.login.token: ', token)
+            window.localStorage.setItem('token', token.id);
+            setAuth(token);
+            /*      //This was in the original version of this code. I don't understand why though. 
+            await axios.get('/api/auth', token)
+            .then( user => {
+                console.log(`User Data at App.login:`);
+                console.log(user);
+                console.log(user.data);
+                setAuth(user.data);
+            })
+            .catch( ex => console.log(`Error at App.login: ${ ex }`));
+            //*/
+        }else{
+            setAuth({ });
+        };
     }
+
+    /*
+    const exchangeTokenForAuth = async() => {
+        const token = window.localStorage.getItem('token');
+        { headers : { authorization : token } };
+    }
+    */
 
     return (
         <Router>
@@ -72,8 +106,8 @@ const App = () => {
                     <Route path = '/community/' exact render = { (props) => ( <>{ <Community auth = { auth } /> }</> )} />
                     <Route path = '/mywork/' exact render = { (props) => ( <>{ <MyWork auth = { auth } publishedBooks = { publishedBooks } /> }</> )} />
                     <Route path = '/bookmarks/' exact render = { (props) => (<> { <Bookmarks auth = { auth } publishedBooks = { publishedBooks } /> }</> ) } />
-                    <Route path = '/profile/' exact render = { (props) => ( <>{ auth.id && <Profile auth = { auth } login = { login } /> }</> )} />
-                    <Route path = '/login/' exact render = { (props) => ( <>{ !auth.id && <Login login = { login } /> }</> )} />
+                    { auth.id && <Route path = { `/profile/${ auth.username.replace(/ /g, '-') }` } exact render = { (props) => ( <>{ auth.id && <Profile auth = { auth } login = { login } /> }</> )} /> }
+                    <Route path = '/login/' exact render = { (props) => ( <>{ !auth.id && <Login auth = { auth } login = { login } /> }</> )} />
 
                     <Route path = '/mywork/draft/' exact render = { (props) => ( <>{ <DraftEditor auth = { auth } /> }</> )} />
                     <Route path = '/mywork/upload/' exact render = { (props) => ( <>{ <FileUpload auth = { auth } /> }</> )} />
